@@ -11,7 +11,7 @@ def category_list(request):
     courses = Course.objects.all()
 
     # Пагинатор начало
-    paginator = Paginator(courses, 1)
+    paginator = Paginator(courses, 12)
     page_number = request.GET.get('page', default=1)
     page = paginator.get_page(page_number)
     is_paginated = page.has_other_pages()

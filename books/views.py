@@ -8,7 +8,7 @@ from django.views import View
 
 
 def main_page(request):
-    return render(request, 'home.html')
+    return redirect('/books')
 
 
 class SearchView(View):

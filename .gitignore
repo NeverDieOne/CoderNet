@@ -120,3 +120,4 @@ booklist/migrations/__pycache__/
 books/__pycache__/
 video/__pycache__/
 video/migrations/__pycache__/
+/media

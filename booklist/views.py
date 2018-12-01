@@ -15,7 +15,7 @@ def book_list(request):
     categories = Category.objects.all()
 
     # Пагинатор начало
-    paginator = Paginator(books, 1)
+    paginator = Paginator(books, 12)
     page_number = request.GET.get('page', default=1)
     page = paginator.get_page(page_number)
     is_paginated = page.has_other_pages()

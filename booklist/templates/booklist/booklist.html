@@ -32,7 +32,10 @@
                 <div class="media-body">
                     <h5 class="mt-0"><a href='{{ book.get_absolute_url }}'>
                         <p class='text-dark'>{{ book.title }}</p></a></h5>
-                    <p class='text-dark'>{{ book.description|truncatewords:20|safe }}</p>
+                    <p class='text-dark'>{% autoescape off %}
+                        {{ book.description|truncatewords:20 }}
+                    {% endautoescape %}
+                    </p>
                     <span class="badge badge-secondary"> {{ book.category.first }} </span>
                 </div>
             </li>

@@ -52,7 +52,10 @@
         <object data="{{ book.book_file.url }}" type="application/pdf" width="100%" height="600px"></object>
     {% endif %}
     <br/><br/>
-    <p>{{ book.description }}</p>
+    <p>{% autoescape off %}
+        {{ book.description }}
+    {% endautoescape %}
+    </p>
     <br/><br/>
     <table class="table">
         <thead>
